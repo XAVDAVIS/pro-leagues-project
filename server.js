@@ -30,6 +30,14 @@ app.get('/leagues/seed', (req, res ) => {
     });
 });
 
+            // INDUCES  
+// Index
+
+app.get('/leagues', (req, res ) => {
+    league.find({}, (err, leagues) => {
+        res.render('index', { leagues });
+    });
+});
 
 
 
