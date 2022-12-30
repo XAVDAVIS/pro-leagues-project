@@ -10,5 +10,17 @@
     <nav>
         <a href="/leagues/new">Create Your League</a>
     </nav>
+    <h1>Pro League List</h1>
+    <ul>
+        <% leagues.forEach(l => { %> 
+            <li>
+                <a href="/leagues/<%= l._id %>"><%= l.name; %></a>
+                <form action="/leagues/<%= l._id %>?+method=DELETE" method="POST">
+                    <input type="submit" value="Delete">
+                </form>
+                <a href="/leagues/<%= l._id %>/edit">Edit League</a>
+            </li>
+        <% }); %>
+    </ul>
 </body>
 </html>

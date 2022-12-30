@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const data = require('./data');
-
+const league = require('./models/league');
 require('dotenv').config();
 
 const app = express();
