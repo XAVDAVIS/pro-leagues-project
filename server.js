@@ -39,9 +39,46 @@ app.get('/leagues', (req, res ) => {
     });
 });
 
+// New 
+app.get('leagues', (req, res ) => {
+    res.render('new');
+});
 
+// Delete 
+app.delete('/leagues/:id', (req, res) => {
+    league.findByIdAndDelete(req.params.id, (err) => {
+        res.redirect('/leagues');
+        // anytimes the data changes we res.redirect (update, create, delete etc)
+    });
+});
 
+// Update 
+app.put('/leagues:id', (req, res) => {
+    league.findByIdAndDelete(req.params.id, req.body, {new: true }, (err, league) => {
+        res.redirect(`/leagues/${req.params.id}`)
+    });
+});
 
+// Create 
+app.post('/leagues', (req, res ) => {
+    league.create(req.body, (err, leagues) => {
+        res.redirect('/leagues');
+    });
+});
+
+// Edit 
+app.get('/leagues/:id/edit', (req, res ) => {
+    league.findById(req.params.id, (err, leagues) => {
+        res.render('edit.ejs', { leagues });
+    });
+});
+
+// Show 
+app.get('/leagues/:id', (req, res ) => {
+    league.findById(req.params.id, (err, leagues) => {
+        res.render('show.ejs', { leagues });
+    });
+});
 
 
 
