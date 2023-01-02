@@ -20,6 +20,10 @@ const db = mongoose.connection;
 db.on('error', (err) => console.log('an error occurred with MongoDB: ' + err.message));
 db.on('connected', () => console.log(`Connected to MongoDB on ${db.port}`));
 
+app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
+
+
 // Seed Route 
 app.get('/leagues/seed', (req, res ) => {
     league.deleteMany({}, (err) => {
@@ -35,13 +39,13 @@ app.get('/leagues/seed', (req, res ) => {
 
 app.get('/leagues', (req, res ) => {
     league.find({}, (err, leagues) => {
-        res.render('index', { leagues });
+        res.render('index.ejs', { leagues });
     });
 });
 
 // New 
-app.get('leagues', (req, res ) => {
-    res.render('new');
+app.get('leagues/new', (req, res ) => {
+    res.render('new.ejs');
 });
 
 // Delete 
@@ -54,7 +58,7 @@ app.delete('/leagues/:id', (req, res) => {
 
 // Update 
 app.put('/leagues:id', (req, res) => {
-    league.findByIdAndDelete(req.params.id, req.body, {new: true }, (err, league) => {
+    league.findByIdAndUpdate(req.params.id, req.body, {new: true }, (err, leagues) => {
         res.redirect(`/leagues/${req.params.id}`)
     });
 });

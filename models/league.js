@@ -24,4 +24,4 @@ const leagueSchema = new Schema({
     }, 
 })
 
-module.exports = mongoose.model('league', leagueSchema);
+module.exports = mongoose.model('leagues', leagueSchema);
