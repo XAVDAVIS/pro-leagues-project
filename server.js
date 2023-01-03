@@ -44,7 +44,7 @@ app.get('/leagues', (req, res ) => {
 });
 
 // New 
-app.get('leagues/new', (req, res ) => {
+app.get('/leagues/new', (req, res ) => {
     res.render('new.ejs');
 });
 
@@ -57,7 +57,7 @@ app.delete('/leagues/:id', (req, res) => {
 });
 
 // Update 
-app.put('/leagues:id', (req, res) => {
+app.put('/leagues/:id', (req, res) => {
     league.findByIdAndUpdate(req.params.id, req.body, {new: true }, (err, leagues) => {
         res.redirect(`/leagues/${req.params.id}`)
     });
