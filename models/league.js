@@ -12,7 +12,7 @@ const leagueSchema = new Schema({
     }, 
     image: {
         type: String, 
-        required: true
+        required: false
     }, 
     founded: {
         type: String, 

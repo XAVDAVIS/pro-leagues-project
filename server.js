@@ -1,12 +1,13 @@
 // Dependencies 
 const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const data = require('./data');
 const league = require('./models/league');
 require('dotenv').config();
 
-const app = express();
+
 
 app.set('view engine', 'ejs');
 
@@ -66,6 +67,7 @@ app.put('/leagues/:id', (req, res) => {
 // Create 
 app.post('/leagues', (req, res ) => {
     league.create(req.body, (err, leagues) => {
+        console.log(err)
         res.redirect('/leagues');
     });
 });

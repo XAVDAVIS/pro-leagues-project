@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League Details</title>
+    <%- include('./partials/head.ejs')%
 </head>
-<body>
-    <nav>
-        <a href="/leagues">Back to League List</a>
-    </nav>
-    <h3><%= leagues.name %></h3>
-    <p>Description: <%= leagues.description %></p>
-    <p>Founded: <%= leagues.founded %></p>
-    <p>Teams: <%= leagues.teams %></p>
-    <!-- <p>image: <%= leagues.image %></p>  -->
-<img src="<%=leagues.image %>">
-</body>
+    <body>
+        <div class="body-overlay">
+        <nav>
+            <a href="/leagues">Back to League List</a>
+        </nav>
+        <h3><%= leagues.name %></h3>
+        <p>Description: <%= leagues.description %></p>
+        <p>Founded: <%= leagues.founded %></p>
+        <p>Teams: <%= leagues.teams %></p>
+        <p>Image: <%= leagues.image %></p> 
+        <img src="<%=leagues.image %>">
+        </div>
+    </body>
 </html>

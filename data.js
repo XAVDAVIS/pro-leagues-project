@@ -8,7 +8,7 @@ module.exports = [
     }, {
         name: 'NFL',
         description: 'The NFL, short for the National Football League, is a professional football league where the best American football players in the world get to show their talents. ',
-        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/1200px-National_Football_League_logo.svg.png',
+        image: 'https://static.www.nfl.com/image/upload/v1554321393/league/nvfr7ogywskqrfaiu38m.svg',
         founded: '1920', 
         teams: '32'
     }

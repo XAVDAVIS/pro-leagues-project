@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create A New League</title>
+    <%- include('./partials/head.ejs')%>
 </head>
 <body>
-    <h1>New League Page</h1>
-    <form action="/leagues" method="POST">
-        Name <input type="text" name="name"><br>
-        Description <input type="text" name="description"><br>
-        founded <input type="text" name="founded"><br>
-        Teams <input type="text" name="teams"><br>
-        <input type="submit" value="Add League">
-    </form>
+    <div class="body-overlay">
+        <!-- ========== HEADER ==========  -->
+        <%- include('./partials/header.ejs') %>
+        <!-- ========== MAIN ==========  -->
+        <main class="show-main">
+            <form action="/leagues" method="POST">
+                <h1>New League Page</h1>
+                Name: <input type="text" name="name"><br>
+                Description: <input type="text" name="description"><br>
+                Founded: <input type="text" name="founded"><br>
+                Teams: <input type="text" name="teams"><br>
+                <input type="submit" value="Add League">
+            </form>
+         </main>
+    </div>
 </body>
 </html>

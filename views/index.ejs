@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Leagues </title>
-</head>
-<body>
-    <nav>
-        <a href="/leagues/new">Create Your League</a>
-    </nav>
-    <h1>Pro League List</h1>
-
-    <ul>
-        <% leagues.forEach(l => { %> 
+  <head>
+    <%- include('./partials/head.ejs')%>
+  </head>
+ <body>
+    <div class="body-overlay">
+        <!-- ========== HEADER ========== -->
+      <%- include('./partials/header.ejs') %> 
+        <!-- ========== MAIN ==========  -->
+      <main>
+        <div>
+          <h1>Pro League List</h1>
+          <ul>
+            <% leagues.forEach(l => { %> 
             <li>
                 <a href="/leagues/<%= l._id %>"><%= l.name; %></a>
                 <form action="/leagues/<%= l._id %>?_method=DELETE" method="POST">
@@ -21,7 +20,10 @@
                 </form>
                 <a href="/leagues/<%= l._id %>/edit">Edit League</a>
             </li>
-        <% }); %>
-    </ul>
-</body>
+            <% }); %>
+          </ul>
+        </div>
+        </main>
+    </div>
+  </body>
 </html>

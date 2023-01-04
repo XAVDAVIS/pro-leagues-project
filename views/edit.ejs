@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit League</title>
+    <%- include('./partials/head.ejs')%>
 </head>
 <body>
-    <h1>Edit League</h1>
-    <form action="/leagues/<%= leagues._id %>?_method=PUT" method="POST">
-        Name <input type="text" name="name" value="<%= leagues.name %>" /><br>
-        Description <input type="text" name="description" value="<%= leagues.description %>" /><br>
-        Founded <input type="text" name="founded" value="<%= leagues.founded %>" /><br>
-        Number of Teams <input type="text" name="teams" value="<%= leagues.teams %>" /><br>
-        <input type="submit" value="Update" />
-    </form>
+    <div class="body-overlay">
+        <!-- ========== HEADER =========== -->
+        <%- include('./partials/header.ejs') %>
+        <!-- ========== MAIN =========== -->
+        <main class="show-main">
+            <form action="/leagues/<%= leagues._id %>?_method=PUT" method="POST">
+                <h1>Edit League</h1>
+                Name <input type="text" name="name" value="<%= leagues.name %>" /><br>
+                Description <input type="text" name="description" value="<%= leagues.description %>" /><br>
+                Founded <input type="text" name="founded" value="<%= leagues.founded %>" /><br>
+                Number of Teams <input type="text" name="teams" value="<%= leagues.teams %>" /><br>
+                <input type="submit" value="Update" />
+            </form>
+        </main>
+    </div>
 </body>
 </html>
