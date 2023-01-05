@@ -4,11 +4,12 @@
 ## Technologies that were used 
 - server js 
 - css 
-- Github- Github Pages 
+- Github
+- Heroku 
+- MONGODB
 
 ## Screenshots
 
-![App Screenshot]()
 
 ## Getting Started 
 
