@@ -42,3 +42,18 @@ header li {
     font-weight: 700;
     text-transform: uppercase ;
 }
+
+/* input[type="text"], input[type="submit"] {
+    width: 60%;
+    padding: 1em;
+    border: 0px;
+    border-radius: 0.5em;
+}
+form strong {
+    text-transform: uppercase;
+    display: inline-block;
+} */
+
+h3 {
+    font-family: 'Inconsolata', courier;
+}
