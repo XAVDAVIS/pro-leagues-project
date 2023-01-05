@@ -24,6 +24,8 @@ db.on('connected', () => console.log(`Connected to MongoDB on ${db.port}`));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
+app.use(express.static('public'))
+
 
 // Seed Route 
 app.get('/leagues/seed', (req, res ) => {

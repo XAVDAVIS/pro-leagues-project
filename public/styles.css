@@ -1,3 +1,26 @@
 body {
-    background-image: url();
+    background-image: url('https://www.shutterstock.com/image-illustration/lights-night-football-stadium-3d-260nw-695541667.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'helvetica';
+}
+
+.body-overlay {
+    background: rgba(245, 245, 245, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: 5em;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 }
