@@ -9,7 +9,7 @@
 - MONGODB
 
 ## Screenshots
-
+<img width="1429" alt="Screenshot 2023-01-05 at 2 58 18 AM" src="https://user-images.githubusercontent.com/117596121/210788928-11260d50-2161-4927-9c7d-4e685d444774.png">
 
 ## Getting Started 
 
