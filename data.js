@@ -12,15 +12,9 @@ module.exports = [
         founded: '1920', 
         teams: '32'
     }, {
-        name: 'NHL', 
-        description: 'The NHL, short for the National Hockey League, is a professional hockey league where the best hockey players in the world get to show off their talents.',
-        image: 'https://logos-world.net/wp-content/uploads/2021/09/NHL-Logo.png',
-        founded: '1917',
-        teams: '32',
-    }, {
         name: 'MLB', 
         description: 'The MLB, short for Major League Baseball, is a professional baseball league where the best baseball players in the world get to show off their talents.',
-        image: 'http://cdn.shopify.com/s/files/1/0480/9470/7866/collections/ef26964ae31041325cd9672682c01534.jpg?v=1646869133',
+        image: 'https://sportshub.cbsistatic.com/i/r/2016/09/08/93cc09c4-32ea-4e6e-ad7e-87ced7b3aca4/resize/750x422/cb37bcfbba65499cc326e57b6353e2cc/acento-logo.jpg',
         founded: '1876',
         teams: '30',
     }

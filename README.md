@@ -16,6 +16,6 @@
 [Click here](https://pro-leagues-project.herokuapp.com/leagues) to visit the deployed app
 
 ## Future Enhancements 
-- Instead of just having number of teams, actually include the team names and players
+- Instead of just having number of teams, actually include all of the team names and players
 
-- More detailed CSS stylings
+- More detailed CSS stylings for the body tabs
