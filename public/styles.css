@@ -23,4 +23,22 @@ header {
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    background: white;
+    border-radius: 1em;
+    text-align: center;
+    margin-bottom: 2em;
+    /* justify-content: space-between; */
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header li {
+    font-family: 'Montserrat', helvetica;
+    font-weight: 700;
+    text-transform: uppercase ;
 }

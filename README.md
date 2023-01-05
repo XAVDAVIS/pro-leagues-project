@@ -12,7 +12,7 @@
 
 ## Getting Started 
 
-[Click here]()
+[Click here](https://xavdavis.github.io/pro-leagues-project/)
 
 ## Future Enhancements 
 - Instead of just having number of teams, actually include the team names and players
